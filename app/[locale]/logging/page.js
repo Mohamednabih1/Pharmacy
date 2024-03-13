@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
-import { Header } from '../component/header/header'
-import { Footer } from '../component/footer/footer'
-import './login.css'
+import { Header } from "../component/header/header";
+import { Footer } from "../component/footer/footer";
+import "./login.css";
 
 export function about() {
   return (
@@ -59,6 +59,6 @@ export function about() {
       </div>
       <Footer></Footer>
     </>
-  )
+  );
 }
-export default about
+export default about;

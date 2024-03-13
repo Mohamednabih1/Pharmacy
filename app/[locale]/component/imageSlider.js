@@ -1,6 +1,6 @@
-import * as React from 'react'
+import * as React from "react";
 
-import { Card, CardContent } from '@/components/ui/card'
+import { Card, CardContent } from "@/components/ui/card";
 
 import {
   Carousel,
@@ -8,12 +8,12 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@/components/ui/carousel'
+} from "@/components/ui/carousel";
 
-import Image from 'next/image'
-import Ad1 from '../assets/pharmacy/2.jpg'
-import Ad2 from '../assets/pharmacy/1.png'
-import Ad3 from '../assets/pharmacy/3.jpg'
+import Image from "next/image";
+import Ad1 from "../assets/pharmacy/2.jpg";
+import Ad2 from "../assets/pharmacy/1.png";
+import Ad3 from "../assets/pharmacy/3.jpg";
 
 export function AdvertisePanel() {
   return (
@@ -25,7 +25,7 @@ export function AdvertisePanel() {
             <Card>
               <CardContent className="flex aspect-auto items-center justify-center p-6 min-h-80">
                 <span className="text-4xl font-semibold">
-                  <Image src={Ad1}></Image>
+                  <Image alt="image" src={Ad1}></Image>
                 </span>
               </CardContent>
             </Card>
@@ -36,8 +36,8 @@ export function AdvertisePanel() {
             <Card>
               <CardContent className="flex aspect-auto items-center justify-center p-6 min-h-80">
                 <span className="text-4xl font-semibold">
-                  {' '}
-                  <Image src={Ad2}></Image>
+                  {" "}
+                  <Image alt="image" src={Ad2}></Image>
                 </span>
               </CardContent>
             </Card>
@@ -48,16 +48,16 @@ export function AdvertisePanel() {
             <Card>
               <CardContent className="flex aspect-auto items-center justify-center p-6 min-h-80">
                 <span className="text-4xl font-semibold">
-                  <Image src={Ad3}></Image>
+                  <Image alt="image" src={Ad3}></Image>
                 </span>
               </CardContent>
             </Card>
           </div>
         </CarouselItem>
-        {/* ))} */}
+        {/* ))} */}sad
       </CarouselContent>
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
-  )
+  );
 }
