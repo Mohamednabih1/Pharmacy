@@ -1,0 +1,163 @@
+{
+  "Index": {
+    "title": "Netaq Al-Jamal"
+  },
+
+  "Shop": {
+    "title": "Shop"
+  },
+
+  "NavTop": {
+    "LangChoose": "Select Language"
+  },
+
+  "NavSide": {
+    "link_home": "Home",
+    "link_shop": "Shop",
+    "link_contact": "Contact",
+    "link_about": "About",
+    "copyright": "Copyright © 2024 All Rights Reserved by",
+    "copyright_company": "Zeta"
+  },
+
+  "ProductCard": {
+    "button_add": "Add To Cart",
+    "button_remove": "Remove From Cart",
+    "buy": "Order"
+  },
+
+  "ProductCarousel": {
+    "title": "Our Products"
+  },
+
+  "ProductsDetails": {
+    "discover": "Discover",
+    "title": "Revolutionize Your Skincare Routine with Our Cream Products",
+    "button_explore": "Explore Products",
+
+    "block1": {
+      "title": "Effective Solutions",
+      "para": "Our cream products are specially formulated to deliver visible results and improve your skin's health."
+    },
+    "block2": {
+      "title": "Premium Quality",
+      "para": "We use only the finest ingredients to ensure the highest level of skincare."
+    },
+    "block3": {
+      "title": "Personalized Approach",
+      "para": "Our products are tailored to meet the unique needs of both men and women."
+    },
+    "block4": {
+      "title": "Customer Satisfaction",
+      "para": "We prioritize your satisfaction and strive to exceed your skincare expectations."
+    }
+  },
+
+  "Reviews": {
+    "title": "They All Love Our Products",
+    "review_1": {
+      "name": "AN",
+      "para": "This hair cream is a game-changer! It leaves my hair smooth, shiny, and manageable without feeling greasy. The scent is lovely too. Highly recommend!"
+    },
+    "review_2": {
+      "name": "KM",
+      "para": "Finally found a shampoo that soothes my dry scalp and leaves my hair clean and refreshed. It's gentle yet effective, with a refreshing scent. Highly recommended for scalp concerns."
+    },
+    "review_3": {
+      "name": "MA",
+      "para": "This conditioner is a must-have for curly hair! It detangles, hydrates, and reduces frizz effortlessly. A little goes a long way. Highly recommended!"
+    },
+    "review_4": {
+      "name": "MM",
+      "para": "I've tried many hair creams, but this one stands out! It gives my hair a soft, natural hold with a healthy shine. What I love most is that it doesn't leave any residue or weigh my hair down. Plus, it smells amazing! Definitely my new go-to."
+    },
+    "review_5": {
+      "name": "MN",
+      "para": "This shampoo has transformed my hair! It lathers well, cleanses thoroughly, and leaves my hair feeling incredibly soft and refreshed. I've noticed a significant reduction in oiliness and buildup since using it regularly. The subtle scent is a bonus. Highly recommend for all hair types!"
+    },
+    "review_6": {
+      "name": "AE",
+      "para": "I've struggled to find a conditioner that effectively moisturizes my dry, damaged hair until I discovered this gem! It's super hydrating without being heavy, and it leaves my hair silky smooth and manageable. The scent is delightful and lingers throughout the day. A definite must-have in my hair care routine!"
+    },
+    "review_7": {
+      "name": "KA",
+      "para": "This hair cream exceeded my expectations! It adds volume and texture without weighing down my fine hair. It keeps it soft and natural-looking, with easy application and no residue. Highly recommend for volume seekers!"
+    },
+    "review_8": {
+      "name": "BA",
+      "para": "I've been using this shampoo for a few weeks now, and I'm impressed! Not only does it cleanse my hair thoroughly, but it also adds incredible shine and bounce. My hair feels lighter and healthier after each wash. The scent is refreshing and invigorating, making it a joy to use. Definitely worth every penny!"
+    },
+    "review_9": {
+      "name": "IB",
+      "para": "This conditioner saved my color-treated hair! It's incredibly nourishing, leaving my locks soft, shiny, and more manageable. My hair's health and vibrancy have improved significantly since I started using it. Plus, the scent is divine! Highly recommend for color-treated or damaged hair."
+    }
+  },
+
+  "why": {
+    "title": "Why Netaq Al-Jamal",
+    "fast": "Fast Delivery",
+    "fast_para": "We deliver to your doorstep",
+    "return": "Return and Exchange",
+    "return_para": "For products that do not meet specifications",
+    "shop": "The Best Shopping Experience",
+    "shop_para": "Shop with us safely 100%",
+    "ensure": "We ensure",
+    "ensure_para": "Our customers' satisfaction"
+  },
+
+  "Footer": {
+    "heads": { "about": "about", "contact": "Contact", "quick": "QUICK LINKS" },
+    "col": {
+      "about": "About Us",
+      "contact": "Contact Us",
+      "privacy": "Privacy Policy",
+      "faq": "FAQ"
+    },
+    "aboutText": "Experience the magic of Netaq Al-Jamal, where nature's purity meets beauty's essence. Our premium all-natural hair and skin care products are crafted to nourish and enhance your natural radiance. Indulge in revitalizing hair treatments and luxurious skincare essentials, each formulation meticulously crafted for unparalleled results. Elevate your beauty ritual with Netaq Al-Jamal and embrace the transformative power of nature.",
+    "copyright": "Copyright © 2024 All Rights Reserved by",
+    "copyright_company": "Zeta"
+  },
+
+  "productPage": {
+    "notFound": "Please Choose a Specific Product...",
+    "productDetails": "Product Details",
+    "miniPagePath": "Home / Shop / ",
+    "buy": "Order"
+  },
+
+  "aboutPage": {
+    "title": "About Us",
+    "summary": "We are a medical company specialized in selling and providing all Egyptian medicines and cosmetic products in the Gulf countries through our available branches.",
+    "summary1": "We adhere to the highest standards of quality in sourcing and supplying pharmaceuticals and beauty products, ensuring that our customers receive only the best. Our product portfolio spans a comprehensive range of medicines and cosmetic items, showcasing the richness and efficacy of Egyptian healthcare and beauty traditions. With strategically located branches across the Gulf, we bring the essence of Egyptian healthcare and beauty to your doorstep, making it convenient for you to access the products you need.",
+    "about1title": "Who Are We",
+    "about1content": "Welcome to Beauty Zone, a dedicated and trusted medical enterprise committed to providing a wide range of high-quality Egyptian medicines and cosmetic products to the Gulf countries. With a strong emphasis on health and beauty, we take pride in our role as a reliable source for pharmaceuticals and beauty essentials."
+  },
+
+  "faqPage": {
+    "faq": "FAQ",
+    "Q1": {
+      "Q": "What is the delivery time?",
+      "A": "3-5 business days."
+    },
+    "Q2": {
+      "Q": "Is cash on delivery available?",
+      "A": "Yes, it is available."
+    },
+    "Q3": {
+      "Q": "Can I order medicines and products not available on the website?",
+      "A": "Yes, it is possible, just contact us..."
+    }
+  },
+
+  "contactPage": {
+    "phoneNumber": "+971 54 790 8966",
+    "whatsPhoneNumber": "+971 52 188 7468",
+    "address1": "United Arab Emirates, Abu Dhabi, Al Ain",
+    "address2": "Kingdom of Saudi Arabia, Riyadh, Malaz",
+    "address3": "Arab Republic of Egypt, Cairo, Maadi",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "sendMessage": "Send Message"
+  }
+}

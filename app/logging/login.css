@@ -1,0 +1,97 @@
+.logContent {
+  display: flex;
+  height: 70vh;
+}
+
+.login {
+  width: 49%;
+  height: 100%;
+  margin-left: 5%;
+  /* border-right: 1px solid #ddd; */
+}
+.signUp {
+  width: 49%;
+  height: 100%;
+  margin-right: 5%;
+}
+.line {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border-right: 1px solid #ddd;
+}
+.loginHeader {
+  font-weight: bold;
+  text-align: center;
+  margin: 5% 0% 3% 0%;
+  font-family: 'Open Sans';
+  font-size: 2.2em;
+  transition:
+    color 0.3s,
+    border 0.3s,
+    opacity 0.3s;
+}
+
+.signUpHeader {
+  text-align: center;
+  font-weight: bold;
+  margin: 5% 0% 3% 0%;
+  font-size: 2.2em;
+  transition:
+    color 0.3s,
+    border 0.3s,
+    opacity 0.3s;
+}
+.formContent {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.input {
+  height: 15%;
+}
+
+.login form {
+  width: 60%;
+  height: 100%;
+}
+.signUp form {
+  width: 60%;
+  height: 100%;
+}
+
+.input input {
+  /* text-align: center; */
+  padding-left: 5%;
+  width: 100%;
+  height: 60%;
+  border-radius: 50px;
+  border: 1px solid #ddd;
+  font-size: 1.04em;
+  transition:
+    color 0.3s,
+    border 0.3s,
+    opacity 0.3s;
+}
+
+.submitBtn {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.submitBtn button {
+  background-color: #2d2b6c;
+  height: 40%;
+  width: 45%;
+  color: white;
+  border: 1px solid #ddd;
+  border-radius: 40px;
+  font-size: 1.2em;
+  transition:
+    color 0.3s,
+    border 0.3s,
+    opacity 0.3s;
+}
