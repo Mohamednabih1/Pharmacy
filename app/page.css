@@ -9,9 +9,6 @@
   margin-right: 10px;
 }
 
-.main-content {
-  /* height: 100vh; */
-}
 .image-slider {
   margin: 2% 10%;
 }
@@ -20,3 +17,21 @@
   background-color: gray;
 }
 
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 3% auto;
+}
+
+.page {
+  padding: 5px 10px;
+  margin: 0 5px;
+  text-decoration: none;
+  color: #333;
+}
+
+.page.active {
+  border: 1px solid #ddd;
+  color: #000000;
+}

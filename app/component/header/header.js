@@ -1,81 +1,106 @@
 import Image from "next/image";
-import logo from "../../assets/logo.png";
-import email from "../../assets/email.png";
-import facebook from "../../assets/facebook.png";
-import phone from "../../assets/phone.png";
-import profile from "../../assets/profile.png";
-import "./header.css";
-import { FaSearch } from "react-icons/fa";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useSelector } from "react-redux";
 
-// import SearchBar from '../search_bar'
-// import { NavigationMenuDemo } from '../navigation_menu'
+import logo from "../../assets/images/logo-full.png";
+import phone from "../../assets/images/phone.png";
+import email from "../../assets/images/email.png";
+import location from "../../assets/images/location.png";
+import twitter from "../../assets/images/twitter.png";
+import facebook from "../../assets/images/facebook.png";
+import youtube from "../../assets/images/youtube.png";
+import linkedin from "../../assets/images/linkedin.png";
+import cart from "../../assets/images/cart.png";
+import person from "../../assets/images/person.png";
+import search from "../../assets/images/search-white.png";
+import favorite from "../../assets/images/favorite.png";
+
+// import profile from "../../assets/profile.png";
+import "./header.css";
+// import { FaSearch } from "react-icons/fa";
+import Link from "next/link";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { hideLoading } from "@/redux/slices/cartSlice";
+import { useEffect } from "react";
 
 export function Header() {
-  const { loading, cartItems } = useSelector((state) => state.cart);
-  const pathname = usePathname();
+  const dispatch = useDispatch();
 
-  const isMobile = true;
+  function myFunction(header, sticky) {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+      header.setAttribute("style", "margin-top:0%");
+    } else {
+      header.classList.remove("sticky");
+      header.setAttribute("style", "margin-top:2.5%");
+    }
+  }
+
+  useEffect(() => {
+    window.onscroll = function () {
+      var header = document.getElementById("myHeader");
+      var sticky = header.offsetTop;
+      myFunction(header, sticky);
+    };
+    dispatch(hideLoading());
+  }, [dispatch]);
+  const { loading, cartItems } = useSelector((state) => state.cart);
+
+  // const isMobile = true;
   const handleInputChange = (event) => {
     console.log(event.target.value);
-    // setSearchTerm(event.target.value)
   };
   return (
     <>
-      {isMobile && (
-        <div className="Header-top">
-          <div className="Header-top-left">
-            <div className="hover-3">
-              <a href="./location">location</a>
-            </div>
-            <div className="hover-3">contact us</div>
-            <div className="hover-3">see order</div>
+      <div className="Header-top">
+        <div className="Header-top-left">
+          <div className="Header-top-left-item">
+            <Image id="Header-top-image" src={phone} alt="phone"></Image>
+            Call us : 01151129517
           </div>
-          <div className="Header-top-right">
-            <Image id="header-image" src={email} alt="Amin's Pharmacy" />
-            <Image id="header-image" src={facebook} alt="Amin's Pharmacy" />
-            <Image id="header-image" src={phone} alt="Amin's Pharmacy" />
-            <div className="splitter"></div>
-            <div className="hover-3">switch</div>
+          <div className="divider"></div>
+          <div className="Header-top-left-item">
+            <Image id="Header-top-image" src={email} alt="email"></Image>
+            Email : orsa@onFire.com
           </div>
         </div>
-      )}
-      <div className="Header">
-        <div className="left-header">
-          <a href="/">
-            <Image id="logo-image" src={logo} alt="Amin's Pharmacy" />
-          </a>
-        </div>
-        <div className="center-header">
-          {" "}
-          <div>
-            <span className="cart-badge">
-              {loading ? "" : cartItems.reduce((a, c) => a + c.qty, 0)}
-            </span>
-            <Link href="/cart" className="flex justify-between items-end">
-              <svg
-                fill="#ffffff"
-                viewBox="100 120 200 280"
-                width="40px"
-                height="40px"
-              >
-                <path d="M 110.164 188.346 C 104.807 188.346 100.437 192.834 100.437 198.337 C 100.437 203.84 104.807 208.328 110.164 208.328 L 131.746 208.328 L 157.28 313.233 C 159.445 322.131 167.197 328.219 176.126 328.219 L 297.409 328.219 C 306.186 328.219 313.633 322.248 315.951 313.545 L 341.181 218.319 L 320.815 218.319 L 297.409 308.237 L 176.126 308.237 L 150.592 203.332 C 148.426 194.434 140.675 188.346 131.746 188.346 L 110.164 188.346 Z M 285.25 328.219 C 269.254 328.219 256.069 341.762 256.069 358.192 C 256.069 374.623 269.254 388.165 285.25 388.165 C 301.247 388.165 314.431 374.623 314.431 358.192 C 314.431 341.762 301.247 328.219 285.25 328.219 Z M 197.707 328.219 C 181.711 328.219 168.526 341.762 168.526 358.192 C 168.526 374.623 181.711 388.165 197.707 388.165 C 213.704 388.165 226.888 374.623 226.888 358.192 C 226.888 341.762 213.704 328.219 197.707 328.219 Z M 197.707 348.201 C 203.179 348.201 207.434 352.572 207.434 358.192 C 207.434 363.812 203.179 368.183 197.707 368.183 C 192.236 368.183 187.98 363.812 187.98 358.192 C 187.98 352.572 192.236 348.201 197.707 348.201 Z M 285.25 348.201 C 290.722 348.201 294.977 352.572 294.977 358.192 C 294.977 363.812 290.722 368.183 285.25 368.183 C 279.779 368.183 275.523 363.812 275.523 358.192 C 275.523 352.572 279.779 348.201 285.25 348.201 Z" />
-              </svg>
-              Cart
-            </Link>
-            {!loading && cartItems.length > 0 && pathname !== "/cart" && (
-              <div className="caret"></div>
-            )}
+        <div className="Header-top-right">
+          <div className="Header-top-right-item">
+            <Image id="Header-top-image" src={location} alt="location" />
+            Address : orsa at me
           </div>
+          <div className="divider"></div>
+          <div className="Header-top-right-box">switch language</div>
+        </div>
+      </div>
+
+      <div className="header-middle">
+        <div className="header-middle-left">
+          <div className="header-middle-left-item">
+            <Image id="header-middle-image" src={twitter} alt="twitter" />
+          </div>
+          <div className="header-middle-left-item">
+            <Image id="header-middle-image" src={facebook} alt="facebook" />
+          </div>
+          <div className="header-middle-left-item">
+            <Image id="header-middle-image" src={youtube} alt="youtube" />
+          </div>
+          <div className="header-middle-left-item">
+            <Image id="header-middle-image" src={linkedin} alt="linkedin" />
+          </div>
+        </div>
+        <div className="header-middle-center">
+          <Link href={"/"}>
+            <Image id="header-middle-center-image" src={logo} alt="logo" />
+          </Link>
+        </div>
+        <div className="header-middle-right">
           <div className="search-box">
             <button className="btn-search">
-              <i>
-                <center>
-                  <FaSearch></FaSearch>
-                </center>
-              </i>
+              <Image
+                id="header-middle-image-search"
+                src={search}
+                alt="search"
+              />
             </button>
             <input
               type="text"
@@ -84,11 +109,52 @@ export function Header() {
               onChange={handleInputChange}
             ></input>
           </div>
-        </div>
-        <div className="right-header">
-          <a className="right-header-content" href="./logging">
+          <div className="cart-container" href={"/cart"}>
+            <Link href={"/cart"}>
+              <div className="cart-badge">
+                {loading ? "..." : cartItems.reduce((a, c) => a + c.qty, 0)}
+              </div>
+            </Link>
+            <Link href={"/cart"}>
+              <Image id="header-middle-image" src={cart} alt="cart" />
+            </Link>
+          </div>
+          <Link href={"/logging"}>
+            <Image id="header-middle-image" src={person} alt="person" />
+          </Link>
+          <Link href={"/favorite"}>
+            <Image id="header-middle-image" src={favorite} alt="favorite" />
+          </Link>
+          {/* <Link className="right-header-content" href="/logging">
             <Image id="profile" src={profile} alt="profile"></Image>
-          </a>
+          </Link> */}
+        </div>
+      </div>
+
+      <div className="header-bottom" id="myHeader">
+        <div className="dropdown">
+          <span>Mouse over me</span>
+          <div className="dropdown-content">
+            <p>Hello World!</p>
+          </div>
+        </div>{" "}
+        <div className="dropdown">
+          <span>Mouse over me</span>
+          <div className="dropdown-content">
+            <p>Hello World!</p>
+          </div>
+        </div>{" "}
+        <div className="dropdown">
+          <span>Mouse over me</span>
+          <div className="dropdown-content">
+            <p>Hello World!</p>
+          </div>
+        </div>{" "}
+        <div className="dropdown">
+          <span>Mouse over me</span>
+          <div className="dropdown-content">
+            <p>Hello World!</p>
+          </div>
         </div>
       </div>
     </>

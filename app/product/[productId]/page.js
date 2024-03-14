@@ -44,15 +44,15 @@ export default function ProductId() {
   var salePercentage = "8%";
   var isRemaining = true;
 
-  const addItemToCart = () => {
-    console.log(item._id);
+  // const addItemToCart = () => {
+  //   console.log(item._id);
 
-    //   {
-    //     "productId": "65dcbd3212140b7b07ee7bf2",
-    //     "customer": "65e9536cfc12973adf22b8ac",
-    //     "quantity":1
-    // }
-  };
+  //   //   {
+  //   //     "productId": "65dcbd3212140b7b07ee7bf2",
+  //   //     "customer": "65e9536cfc12973adf22b8ac",
+  //   //     "quantity":1
+  //   // }
+  // };
 
   return (
     <>
@@ -101,16 +101,17 @@ export default function ProductId() {
 
             <div className="purchase-info">
               <AddToCart
+                increasePerClick={true}
                 className="fas fa-shopping-cart"
                 product={{
-                  id: "1",
-                  name: "Pink Polo Shirt",
+                  id: item._id,
+                  name:item.name,
                   image: "/images/p1.jpg",
-                  price: 120,
+                  price: item.price,
                   countInStock: 10,
                   rating: 4.5,
                   numReviews: 10,
-                  description: "high quality shirt",
+                  description: item.description,
                 }}
               ></AddToCart>
             </div>

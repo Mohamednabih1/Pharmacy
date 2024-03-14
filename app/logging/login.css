@@ -15,31 +15,26 @@
   margin-right: 5%;
 }
 .line {
-  margin-top: 1%;
-  margin-bottom: 1%;
+  margin-top: 6%;
+  margin-bottom: 5%;
   border-right: 1px solid #ddd;
 }
 .loginHeader {
   font-weight: bold;
   text-align: center;
   margin: 5% 0% 3% 0%;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-size: 2.2em;
-  transition:
-    color 0.3s,
-    border 0.3s,
-    opacity 0.3s;
+  transition: color 0.3s, border 0.3s, opacity 0.3s;
 }
 
 .signUpHeader {
   text-align: center;
   font-weight: bold;
   margin: 5% 0% 3% 0%;
+  font-family: "Open Sans";
   font-size: 2.2em;
-  transition:
-    color 0.3s,
-    border 0.3s,
-    opacity 0.3s;
+  transition: color 0.3s, border 0.3s, opacity 0.3s;
 }
 .formContent {
   height: 100%;
@@ -69,10 +64,7 @@
   border-radius: 50px;
   border: 1px solid #ddd;
   font-size: 1.04em;
-  transition:
-    color 0.3s,
-    border 0.3s,
-    opacity 0.3s;
+  transition: color 0.3s, border 0.3s, opacity 0.3s;
 }
 
 .submitBtn {
@@ -83,15 +75,12 @@
 }
 
 .submitBtn button {
-  background-color: #2d2b6c;
+  background-color: #74b239;
   height: 40%;
   width: 45%;
   color: white;
   border: 1px solid #ddd;
   border-radius: 40px;
   font-size: 1.2em;
-  transition:
-    color 0.3s,
-    border 0.3s,
-    opacity 0.3s;
+  transition: color 0.3s, border 0.3s, opacity 0.3s;
 }

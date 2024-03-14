@@ -3,22 +3,21 @@ import "./page.css";
 import "./classes/product";
 
 import { AdvertisePanel } from "./component/imageSlider";
-import { PaginationDemo } from "./component/pagination";
 import { Footer } from "./component/footer/footer";
 import { ProductGrid } from "./component/productsGrid";
 import { Header } from "./component/header/header";
+import { HomeBanner } from "./component/homeBanner/banner";
 
 import { useState, useEffect } from "react"; // Import necessary hooks
 
 import { useDispatch } from "react-redux";
 import { hideLoading } from "@/redux/slices/cartSlice";
-
 // import { tes } from "/images/p1.jpg";
 
 export default function Home() {
+  const myNextIcon = ">";
+  const myPerviousIcon = "<";
   const dispatch = useDispatch();
-  useEffect(() => {}, []);
-
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -41,17 +40,52 @@ export default function Home() {
     fetchData();
   }, [dispatch]);
 
+  let pages = [1, 2, 3, 4, 5];
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const handlePageClick = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+  const handleNextClick = () => {
+    if (currentPage != pages.length) {
+      let myPage = currentPage + 1;
+      setCurrentPage(myPage);
+      window.location.href = `#${currentPage}`;
+    }
+  };
+  const handlePerviousClick = () => {
+    if (currentPage != 1) {
+      let myPage = currentPage - 1;
+      setCurrentPage(myPage);
+      window.location.href = `#${currentPage}`;
+    }
+  };
+
   return (
     <body>
       <Header></Header>
-      {/* <Image alt="sad" src={tes}></Image> */}
       <div className="main-content">
         <div className="image-slider">
           <AdvertisePanel></AdvertisePanel>
         </div>
+        <HomeBanner></HomeBanner>
         <ProductGrid data={items}></ProductGrid>
-
-        <PaginationDemo></PaginationDemo>
+        <div className="pagination">
+          <button onClick={handlePerviousClick}>
+            {myPerviousIcon} Pervious
+          </button>
+          {pages.map((pageNumber) => (
+            <a
+              key={pageNumber}
+              href="#"
+              className={`page ${currentPage === pageNumber ? "active" : ""}`}
+              onClick={() => handlePageClick(pageNumber)}
+            >
+              {pageNumber}
+            </a>
+          ))}
+          <button onClick={handleNextClick}>next {myNextIcon}</button>
+        </div>
       </div>
 
       <div className="footer">

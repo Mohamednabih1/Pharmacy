@@ -9,6 +9,7 @@ export default function AddToCart({
   showQty = true,
   redirect = false,
   increasePerClick = false,
+  useQuantity: useQuantity = true,
 }) {
   const dispatch = useDispatch();
 
@@ -35,7 +36,7 @@ export default function AddToCart({
 
   return (
     <>
-      {product.countInStock > 0 && showQty && (
+      {product.countInStock > 0 && showQty && useQuantity && (
         <div className="mb-2 flex justify-between">
           <div>Qty</div>
           <div>
@@ -54,7 +55,18 @@ export default function AddToCart({
       )}
       <div>
         {product.countInStock > 0 ? (
-          <button className="primary-button w-full" onClick={addToCartHandler}>
+          <button
+            style={{
+              borderStyle: " none",
+              padding: " 3%",
+              fontSize: " 18px",
+              letterSpacing: " 2px",
+              borderRadius: " 25px",
+              backgroundColor: " #74b239",
+              color: " #fff",
+            }}
+            onClick={addToCartHandler}
+          >
             Add to cart
           </button>
         ) : (

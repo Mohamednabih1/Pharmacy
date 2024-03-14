@@ -1,65 +1,45 @@
-import './footer.css'
-
+import "./footer.css";
+import Image from "next/image";
+import logo from "../../assets/images/logoGreen.png";
+import phone from "../../assets/images/phone.png";
+import email from "../../assets/images/email.png";
+import location from "../../assets/images/location.png";
 export function Footer() {
   return (
     <footer className="footer">
       <div className="footer__addr">
-        <h1 className="footer__logo">Something</h1>
-        <h2>Contact</h2>
-
-        <address>
-          5534 Somewhere In. The World 22193-10212<br></br>
-          <a className="footer__btn" href="mailto:example@gmail.com">
-            Email Us
-          </a>
-        </address>
+        <h1 className="footer__logo">
+          <Image id="footer-logo" src={logo} alt="logo"></Image>
+        </h1>
+        An injection puts a small amount of filler into a chosen area with the
+        aim of helping to tempo rarely reduce the visibility
+        <a className="footer__btn" href="mailto:example@gmail.com">
+          Email Us
+        </a>
       </div>
 
       <ul className="footer__nav">
         <li className="nav__item">
-          <h2 className="nav__title">Media</h2>
+          <h2 className="nav__title">INFORMATION</h2>
 
           <ul className="nav__ul">
+            <div className="footer-item">
+              <Image id="Header-top-image" src={phone} alt="phone"></Image>
+              Call us : 01151129517
+            </div>
+
             <li>
-              <a href="#">Online</a>
+              <div className="footer-item">
+                <Image id="Header-top-image" src={email} alt="email"></Image>
+                Email : orsa@onFire.com
+              </div>
             </li>
 
             <li>
-              <a href="#">Print</a>
-            </li>
-
-            <li>
-              <a href="#">Alternative Ads</a>
-            </li>
-          </ul>
-        </li>
-
-        <li className="nav__item nav__item--extra">
-          <h2 className="nav__title">Technology</h2>
-
-          <ul className="nav__ul nav__ul--extra">
-            <li>
-              <a href="#">Hardware Design</a>
-            </li>
-
-            <li>
-              <a href="#">Software Design</a>
-            </li>
-
-            <li>
-              <a href="#">Digital Signage</a>
-            </li>
-
-            <li>
-              <a href="#">Automation</a>
-            </li>
-
-            <li>
-              <a href="#">Artificial Intelligence</a>
-            </li>
-
-            <li>
-              <a href="#">IoT</a>
+              <div className="footer-item">
+                <Image id="Header-top-image" src={location} alt="location" />
+                Address : orsa at me
+              </div>
             </li>
           </ul>
         </li>
@@ -91,5 +71,5 @@ export function Footer() {
     </div> */}
       </div>
     </footer>
-  )
+  );
 }

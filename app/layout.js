@@ -1,8 +1,6 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
 import { StoreProvider } from "@/redux/StoreProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
 
 export const metadata = {
   title: "Create Next App",
@@ -11,8 +9,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" style={{ margin: 0 }}>
-      <body style={{ margin: 0 }} className={inter.className}>
+    <html lang="en">
+      <body>
         <StoreProvider>{children}</StoreProvider>
       </body>
     </html>

@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
+import { Header } from "../component/header/header";
+import { Footer } from "../component/footer/footer";
 
 export default function CartPage() {
   const dispatch = useDispatch();
@@ -21,6 +23,7 @@ export default function CartPage() {
 
   return (
     <div>
+      <Header></Header>
       <h1 className="mb-4 text-xl">Shopping Cart</h1>
       {loading ? (
         <div>Loading...</div>
@@ -108,6 +111,7 @@ export default function CartPage() {
           </div>
         </div>
       )}
+      <Footer></Footer>
     </div>
   );
 }

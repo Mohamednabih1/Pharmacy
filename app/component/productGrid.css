@@ -9,14 +9,24 @@
   grid-template-columns: 32.7% 32.7% 32.7%;
   gap: 1%;
 }
+
 .item {
-  background-color: #f2f2f2;
-  padding: 20px;
+  background-color: #ffffff7f;
+  padding: 5px;
   text-align: center;
   border-radius: 5px;
+  border: 1px solid #ddd;
+  /* margin-bottom: 2%; */
 }
+
+.item-price {
+  color: #74b239;
+  margin: 2% auto;
+}
+
 .itemImage {
-  height: 80%;
+  height: 75%;
+  margin-bottom: 2%;
 }
 
 #image {
