@@ -54,7 +54,7 @@ export function AdvertisePanel() {
             </Card>
           </div>
         </CarouselItem>
-        {/* ))} */}sad
+        {/* ))} */}
       </CarouselContent>
       <CarouselPrevious />
       <CarouselNext />

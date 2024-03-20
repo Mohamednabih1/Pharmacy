@@ -35,3 +35,33 @@
   border: 1px solid #ddd;
   color: #000000;
 }
+
+.seeMore {
+  margin: 3% auto;
+  width: 80%;
+  text-align: end;
+  /* start */
+  font-size: 1.6em;
+  position: relative;
+  color: #74b239;
+}
+.seeMore:before {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 2px;
+  background: #ddd;
+  left: 0;
+  /* right */
+  top: 60%;
+  position: absolute;
+}
+
+@keyframes grow-and-shrink {
+  0% {
+    transform: scale(0.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

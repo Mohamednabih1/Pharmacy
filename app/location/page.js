@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
-import { Header } from '../component/header/header'
-import { Footer } from '../component/footer/footer'
-import MapComponent from '../component/map'
+import { Header } from "../component/header/header";
+import { Footer } from "../component/footer/footer";
+import MapComponent from "../component/map";
 function about() {
   return (
     <>
@@ -12,6 +12,6 @@ function about() {
         <Footer></Footer>
       </div>
     </>
-  )
+  );
 }
-export default about
+export default about;

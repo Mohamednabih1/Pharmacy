@@ -4,13 +4,15 @@
   /* border: 1px solid rgba(0, 0, 0, 0.8);  */
   /* height: 200vh; */
   /* width: 100%; */
-  margin: 0% 10% 0% 10%;
+  margin: 0% 10% 3% 10%;
   display: grid;
-  grid-template-columns: 32.7% 32.7% 32.7%;
+  grid-template-columns: 24.3% 24.3% 24.3% 24.3%;
   gap: 1%;
+  height: auto;
 }
 
 .item {
+  height: auto;
   background-color: #ffffff7f;
   padding: 5px;
   text-align: center;
@@ -25,11 +27,25 @@
 }
 
 .itemImage {
-  height: 75%;
+  height: 73%;
   margin-bottom: 2%;
 }
 
 #image {
   width: 100%;
   object-fit: fill;
+}
+
+.productButtons {
+  display: flex;
+  width: 100%;
+}
+.AddToFavoriteBtn {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.AddToCartBtn {
+  width: 60%;
 }

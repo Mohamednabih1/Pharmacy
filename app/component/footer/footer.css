@@ -27,7 +27,7 @@
   font-weight: 400;
   text-transform: lowercase;
   font-size: 1.5rem;
-  margin-bottom: 2%;
+  margin-bottom: 3%;
 }
 
 .footer__addr h2 {
@@ -99,6 +99,7 @@
   display: flex;
   flex-wrap: wrap;
   color: #999;
+  align-items: flex-end;
 }
 
 .legal__links {

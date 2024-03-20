@@ -1,0 +1,57 @@
+.noItemsHere {
+  height: 50%;
+}
+
+.ProductGridCategory {
+  margin: 2% 0%;
+}
+
+.goShoppingContent {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-top: 3%;
+  border-top: 1px solid #ddd;
+}
+
+.goShoppingImg {
+  margin-left: 10%;
+  width: 30%;
+  height: 50%;
+}
+.goShoppingBtnContent {
+  margin-right: 10%;
+  display: block;
+  width: 50%;
+}
+.goShoppingText {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 40%;
+  width: 100%;
+  margin-bottom: 4%;
+  font-size: 2.2em;
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
+.goShoppingBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15%;
+  /* padding: 4%; */
+}
+
+.goShoppingBtn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 10px;
+  background-color: #74b239;
+  width: 30%;
+  height: 100%;
+}

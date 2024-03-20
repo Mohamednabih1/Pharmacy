@@ -1,5 +1,19 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "cSpell.words": ["aljamal", "netaq", "orsa"]
+  "cSpell.words": [
+    "aljamal",
+    "bluepurple",
+    "dribbble",
+    "Eslam",
+    "netaq",
+    "orsa",
+    "الاقسام",
+    "الرئيسية",
+    "الصفحة",
+    "المزيد",
+    "تفقد",
+    "فروعنا",
+    "مواقع"
+  ]
 }

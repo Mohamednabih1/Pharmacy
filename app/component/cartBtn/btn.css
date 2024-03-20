@@ -1,0 +1,12 @@
+.purchase-info {
+  display: flex;
+  align-items: center;
+  gap: 1%;
+}
+.purchaseNumInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-right: 2%; */
+}
+

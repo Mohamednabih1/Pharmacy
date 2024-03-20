@@ -10,6 +10,7 @@
   margin-left: 10%;
   width: 30%;
   display: flex;
+  animation: slide-in 1000ms;
 }
 .header-middle-left-item {
   height: 100%;
@@ -25,6 +26,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: grow-and-shrink 1000ms;
 }
 .header-middle-center a {
   height: 100%;
@@ -45,6 +47,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  animation: slide-in-from-right 1000ms;
 }
 
 .right-header-content {
@@ -163,7 +166,7 @@
 .Header-top-left-item {
   display: flex;
   width: auto;
-  margin-right: 1%;
+  margin:0 1%;
   height: 100%;
 }
 
@@ -193,13 +196,13 @@
   object-fit: contain;
   height: 20px;
   width: 20px;
-  margin-right: 5px;
+  margin: 0% 5px;
 }
 
 .divider {
   height: 70%;
   width: 1%;
-  margin-right: 1.5%;
+  /* margin-right: 1.5%; */
   border-right: 2px solid #ddd;
 }
 .cart-container {
@@ -231,6 +234,8 @@
 .header-bottom {
   margin-top: 2.5%;
   width: 100%;
+  position: relative;
+  z-index: 99;
   display: flex;
   height: 8vh;
   justify-content: center;
@@ -260,11 +265,12 @@
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
-  z-index: 1;
 }
 
 .dropdown:hover .dropdown-content {
+  position: fixed;
   display: block;
+  z-index: 999;
 }
 
 @keyframes slideDown {
@@ -273,5 +279,29 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes slide-in-from-right {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes grow-and-shrink {
+  0% {
+    transform: scale(0.3);
+  }
+  100% {
+    transform: scale(1);
   }
 }

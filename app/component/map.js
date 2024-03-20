@@ -1,8 +1,7 @@
-'use'
 function Map() {
   return (
-    <div style={{ margin: '5%' }}>
-      <div style={{ width: '100%' }}>
+    <div style={{ margin: "5%" }}>
+      <div style={{ width: "100%" }}>
         <iframe
           width="100%"
           height="600"
@@ -21,7 +20,7 @@ function Map() {
       {/* <a href="https://www.gps.ie/">gps vehicle tracker</a> */}
       {/* </div> */}
     </div>
-  )
+  );
 }
 
-export default Map
+export default Map;

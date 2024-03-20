@@ -7,7 +7,8 @@ import ImageViewer from "../../component/ImageViewer";
 import { usePathname } from "next/navigation";
 import "./product.css";
 import { useState, useEffect } from "react"; // Import useState hook
-import AddToCart from "../../component/addToCartBtn";
+import AddToCart from "../../component/cartBtn/addToCartBtn";
+import AddToFavorite from "@/app/component/favoriteBtn/addToFavoriteBtn";
 // import { cookies } from "next/headers";
 
 export default function ProductId() {
@@ -32,7 +33,6 @@ export default function ProductId() {
         }
       } catch (error) {
         console.error("Error fetching user data:", error);
-        // Handle errors appropriately (e.g., display error message to user)
       }
     };
 
@@ -44,16 +44,6 @@ export default function ProductId() {
   var salePercentage = "8%";
   var isRemaining = true;
 
-  // const addItemToCart = () => {
-  //   console.log(item._id);
-
-  //   //   {
-  //   //     "productId": "65dcbd3212140b7b07ee7bf2",
-  //   //     "customer": "65e9536cfc12973adf22b8ac",
-  //   //     "quantity":1
-  //   // }
-  // };
-
   return (
     <>
       {" "}
@@ -64,10 +54,7 @@ export default function ProductId() {
           <div className="product-content">
             <h2 className="product-title">{item.name}</h2>
 
-            <div className="product-rating">
-              {/* <span>{item.rate}(21)</span> */}
-              <span>add remaining item number</span>
-            </div>
+            <div className="product-remaining">remaining:276</div>
 
             <div className="product-price">
               {isOnSale && (
@@ -98,22 +85,38 @@ export default function ProductId() {
                 </li>
               </ul>
             </div>
-
-            <div className="purchase-info">
-              <AddToCart
-                increasePerClick={true}
-                className="fas fa-shopping-cart"
-                product={{
-                  id: item._id,
-                  name:item.name,
-                  image: "/images/p1.jpg",
-                  price: item.price,
-                  countInStock: 10,
-                  rating: 4.5,
-                  numReviews: 10,
-                  description: item.description,
-                }}
-              ></AddToCart>
+            <div className="buttons">
+              <div className="purchase-info">
+                <AddToCart
+                  increasePerClick={true}
+                  paddingHorizontal={20}
+                  paddingVertical={2}
+                  product={{
+                    id: item._id,
+                    name: item.name,
+                    image: "/images/p1.jpg",
+                    price: item.price,
+                    countInStock: 10,
+                    rating: 4.5,
+                    numReviews: 10,
+                    description: item.description,
+                  }}
+                ></AddToCart>
+                <AddToFavorite
+                  paddingHorizontal={100}
+                  paddingVertical={10}
+                  product={{
+                    id: item._id,
+                    name: item.name,
+                    image: "/images/p1.jpg",
+                    price: item.price,
+                    countInStock: 10,
+                    rating: 4.5,
+                    numReviews: 10,
+                    description: item.description,
+                  }}
+                ></AddToFavorite>
+              </div>
             </div>
           </div>
         </div>
